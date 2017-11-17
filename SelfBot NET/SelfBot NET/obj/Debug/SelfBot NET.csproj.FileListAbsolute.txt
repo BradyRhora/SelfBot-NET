@@ -1,0 +1,35 @@
+c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe.config
+c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe
+c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.pdb
+c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csprojResolveAssemblyReference.cache
+c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
+c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe.config
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Commands.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Core.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rest.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rpc.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Webhook.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.WebSocket.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Interactive.Async.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Commands.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Core.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rest.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rpc.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Webhook.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.WebSocket.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Interactive.Async.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
