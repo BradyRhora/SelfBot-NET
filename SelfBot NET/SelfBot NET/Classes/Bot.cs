@@ -43,7 +43,7 @@ namespace SelfBot
                 Console.WriteLine("Client Initialized.");
                 commands = new CommandService();
                 Console.WriteLine("Command Service Initialized.");
-                string token = File.ReadAllLines(@"Constants\Token")[0];
+                string token = File.ReadAllLines(@"Constants\UserToken")[0];
                 await InstallCommands();
                 Console.WriteLine("Commands Installed, logging in.");
                 await client.LoginAsync(TokenType.User, token);
