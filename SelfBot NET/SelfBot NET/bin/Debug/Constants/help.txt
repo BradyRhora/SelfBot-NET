@@ -1,0 +1,22 @@
+﻿+eval [code]
+Evaluates C# code.
++deed [name] [age] [skin tone] [hotness]
+Returns inputted persons DEED rating.
++quirk [quirkType]
+Auto changes text to follow quirk. +quirk list for quirk list.
++fuse [input1] [input2]
+Fuses two inputs together then changes nickname to fusion. Only have one input to automatically use current nickname as input1.
++lenny (stats)
+Enables/Disables Lenny converter, changes '&l' to '( ͡° ͜ʖ ͡°)'. Put 'stats' as parameter to view Lenny stats.
++amal [size] [input]
+Creates an amalgamation of [size] size using remainder input.
++f [type]
+F. Types are currently: 'F' and 'pain'.
++pain [text]
+Converts inputted text to painful sadness. Use '|' to seperate words, max word size is 6 letters.
++waggle
+;)
++dragonball (command)
+Can also use +db. You'll probably know which command to use when you need it.
++help
+Shows this menu.
