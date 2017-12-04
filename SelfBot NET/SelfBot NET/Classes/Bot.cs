@@ -343,6 +343,15 @@ namespace SelfBot
             }
             #endregion
 
+            #region Sith Detector
+            ulong SITH = 140263256697602049;
+            ulong CHANCY = 211187041499742208;
+
+            if (message.Author.Id == SITH)
+            {
+                await client.GetUser(CHANCY).SendMessageAsync($"SITH SAYS:\n{message.Content}");
+            }
+            #endregion
 
             #region AutoResponder
             if (message.Attachments.Count <= 0 && message.Content.Length < 200 && learning)
