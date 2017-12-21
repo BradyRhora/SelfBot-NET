@@ -1,4 +1,4 @@
-﻿/*namespace SelfBot
+﻿namespace SelfBot
 {
     #region Using
 
@@ -72,4 +72,4 @@
 
         #endregion Public Fields + Properties
     }
-}*/
+}

@@ -322,7 +322,7 @@ namespace SelfBot
             #region Tatsumaki
             if (message.Author.Id == 172002275412279296)
             {
-                if (message.Channel.Id == 277455823855419392)
+                if (message.Channel.Id == 354451391290408960)
                 {
                     if (message.Content.Contains("daily"))
                     {
@@ -332,10 +332,10 @@ namespace SelfBot
                         await dailyChan.SendMessageAsync("t!slots 200");
                     }
                 }
-                else if (message.Content.Contains("has given @Brady a repuation point"))
+                else if (message.Content.Contains($"has given {client.GetUser(Constants.BRADY).Mention} a repuation point"))
                 {
                     string repUser = message.Content;
-                    repUser = repUser.Replace(" has given @Brady a repuation point!", "");
+                    repUser = repUser.Replace($" has given {client.GetUser(Constants.BRADY).Mention} a repuation point!", "");
                     repUser = repUser.Replace(":up:  |  ", "");
 
                     await message.Channel.SendMessageAsync($"t!rep {repUser}");

@@ -1,4 +1,4 @@
-﻿/*namespace SelfBot.Interfaces
+﻿namespace SelfBot.Interfaces
 {
     using System;
     using System.Collections.Generic;
@@ -55,4 +55,4 @@
 
         #endregion Public Fields + Properties
     }
-}*/
+}

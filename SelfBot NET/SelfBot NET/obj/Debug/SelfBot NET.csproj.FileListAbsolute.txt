@@ -33,3 +33,29 @@ C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\Sel
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csprojResolveAssemblyReference.cache
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.AppContext.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Console.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.IO.FileSystem.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Threading.Thread.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.ValueTuple.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Xml.XPath.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.Scripting.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.Scripting.xml
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Reflection.Metadata.xml

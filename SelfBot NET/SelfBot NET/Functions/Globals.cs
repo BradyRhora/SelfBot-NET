@@ -1,4 +1,4 @@
-﻿/*namespace SelfBot
+﻿namespace SelfBot
 {
     using System.Collections.Generic;
     using Interfaces;
@@ -23,4 +23,4 @@
             "SelfBot"
         };
     }
-}*/
+}

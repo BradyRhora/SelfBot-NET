@@ -12,7 +12,7 @@ namespace SelfBot
     public class Commands : ModuleBase
     {
 
-        /*[Command("eval")]
+        [Command("eval")]
         public async Task EvaluateCmd([Remainder] string expression)
         {
             IUserMessage msg = await ReplyAsync("Evaluating...");
@@ -30,7 +30,7 @@ namespace SelfBot
                 await Context.Channel.SendMessageAsync("", embed: emb);
             }
 
-        }*/
+        }
 
         [Command("deed")]
         public async Task Deed(string name, int age, int skin, int hotness)
