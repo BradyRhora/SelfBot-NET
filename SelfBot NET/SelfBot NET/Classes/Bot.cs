@@ -17,7 +17,7 @@ namespace SelfBot
 
         #region Vars
         public static DiscordSocketClient client;
-        private CommandService commands;
+        public static CommandService commands;
         public static string[] lennyStats = File.ReadAllLines(@"Files\lennyStats.txt"); //0 - happy lennys 1 - sad lennys 2 - bennys
         public static bool quirk;
         public static bool lenny;

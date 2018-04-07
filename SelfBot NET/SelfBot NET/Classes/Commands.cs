@@ -376,26 +376,29 @@ namespace SelfBot
         public async Task Waggle()
         {
             await Context.Message.DeleteAsync();
-            await Context.Channel.SendFileAsync(@"C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot\SelfBot\Constants\knotting-maximum.gif");
+            await Context.Channel.SendFileAsync(@"Constants\knotting-maximum.gif");
         }
 
-        [Command("help")]
+        [Command("help"), Summary("Displays commands and descriptions.")]
         public async Task Help()
         {
-            string[] helpFields = File.ReadAllLines(@"Constants\help.txt");
-
             JEmbed emb = new JEmbed();
-            emb.Author.Name = "SelfBot Commands!";
-            emb.ThumbnailUrl = Context.User.AvatarId;
+            emb.Author.Name = "Commands";
             emb.ColorStripe = GetColor(Context.User);
 
-            for (int i = 0; i < helpFields.Count(); i += 2)
+            foreach (CommandInfo command in Bot.commands.Commands)
+            {
                 emb.Fields.Add(new JEmbedField(x =>
                 {
-                    x.Header = helpFields[i];
-                    x.Text = helpFields[i + 1];
+                    string header = "?" + command.Name;
+                    foreach (ParameterInfo parameter in command.Parameters)
+                    {
+                        header += " [" + parameter.Name + "]";
+                    }
+                    x.Header = header;
+                    x.Text = command.Summary;
                 }));
-
+            }
             await Context.Channel.SendMessageAsync("", embed: emb.Build());
         }
 
