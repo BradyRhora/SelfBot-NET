@@ -343,37 +343,6 @@ namespace SelfBot
             }
             #endregion
             
-            #region AutoResponder
-            if (message.Attachments.Count <= 0 && message.Content.Length < 200 && learning)
-            {
-
-                //So, we'll have to start with learning proper responses. Instead of just using my information, I'll try to use as much as I can from all the servers I'm on.
-
-
-                string txt = message.Content;
-
-                int chanID = -1;
-                for (int i = 0; i < channels.Count(); i++)
-                {
-                    if (channels[i] == message.Channel)
-                    {
-                        chanID = i;
-                        break;
-                    }
-                }
-
-                //If the message has been seen before..
-                if (!Funcs.ListExists(txt))
-                {
-                    var list = Funcs.NewList(txt);
-                }
-
-                if (lastMessage[chanID] != null) Funcs.AddResponse(lastMessage[chanID], txt);
-
-                lastMessage[chanID] = message.Content;
-            }
-            #endregion
-
 
             if (message.HasCharPrefix('+', ref argPos) && (message.Author.Id == client.CurrentUser.Id || message.Author.Id == Constants.ZAIM))
             {

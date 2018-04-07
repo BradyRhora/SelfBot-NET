@@ -152,7 +152,6 @@
     <Compile Include="Classes\Commands.cs" />
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Functions\Evaluate.cs" />
-    <Compile Include="Functions\Funcs.cs" />
     <Compile Include="Functions\Globals.cs" />
     <Compile Include="Functions\Interfaces.cs" />
     <Compile Include="Functions\JEmbed.cs" />
