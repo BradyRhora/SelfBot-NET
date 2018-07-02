@@ -6,11 +6,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
+using System.Net.Http;
 
 namespace SelfBot
 {
     public class Commands : ModuleBase
     {
+        static HttpClient client = new HttpClient();
 
         [Command("eval"), Summary("Runs the given C# code and returns the output.")]
         public async Task EvaluateCmd([Remainder] string expression)
@@ -390,7 +392,7 @@ namespace SelfBot
             {
                 emb.Fields.Add(new JEmbedField(x =>
                 {
-                    string header = "?" + command.Name;
+                    string header = "+" + command.Name;
                     foreach (ParameterInfo parameter in command.Parameters)
                     {
                         header += " [" + parameter.Name + "]";
@@ -402,6 +404,59 @@ namespace SelfBot
             await Context.Channel.SendMessageAsync("", embed: emb.Build());
         }
         
+        [Command("subscript"), Summary("Convert text to subscript")]
+        public async Task Subscript([Remainder] string text)
+        {
+            string msg = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (Constants.ALPHABET.Contains(text[i])) msg += Constants.SUBSCRIPT[Constants.ALPHABET.IndexOf(text[i])];
+                else msg += text[i];
+            }
+            await Context.Message.ModifyAsync(x => x.Content = msg);
+        }
+
+        [Command("small"), Summary("Convert text to small")]
+        public async Task Small([Remainder] string text)
+        {
+            string msg = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (Constants.ALPHABET.Contains(text[i])) msg += Constants.SMALL[Constants.ALPHABET.IndexOf(text[i])];
+                else msg += text[i];
+            }
+            await Context.Message.ModifyAsync(x => x.Content = msg);
+        }
+
+        [Command("superscript"), Summary("Convert text to superscript")]
+        public async Task Superscript([Remainder] string text)
+        {
+            string msg = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (Constants.ALPHABET.Contains(text[i])) msg += Constants.SUPERSCRIPT[Constants.ALPHABET.IndexOf(text[i])];
+                else msg += text[i];
+            }
+            await Context.Message.ModifyAsync(x => x.Content = msg);
+        }
+
+        [Command("bigemote"), Summary("Make emotes big!")]
+        public async Task BigEmote(string emote)
+        {
+            Emoji em = new Emoji(emote);
+            await ReplyAsync(em.Name + "\n" + (em as IEmote).Name);
+        }
+
+        [Command("nextshift"), Summary("Get my next shift date and time.")]
+        public async Task NextShift()
+        {
+            Dictionary<string, string> data = new Dictionary<string, string>()
+            {
+                {"username","us" },
+                {"password","pa" }
+            };
+        }
+
         Color GetColor(IUser User)
         {
             var user = User as IGuildUser;

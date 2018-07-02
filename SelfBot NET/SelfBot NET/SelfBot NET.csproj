@@ -147,6 +147,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Constants\UserToken" />
     <Compile Include="Classes\Bot.cs" />
     <Compile Include="Functions\BreadBuilder.cs" />
     <Compile Include="Classes\Commands.cs" />
@@ -164,6 +165,15 @@
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Constants\DefAvatar.jpg" />
+    <Content Include="bin\Debug\Constants\help.txt" />
+    <Content Include="bin\Debug\Constants\knotting-maximum.gif" />
+    <Content Include="bin\Debug\Constants\SudokuFormat.txt" />
+    <Content Include="bin\Debug\Constants\WIWdata.txt" />
+    <Content Include="bin\Debug\Files\lennyStats.txt" />
+    <Content Include="bin\Debug\Files\saves.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.1\build\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\NETStandard.Library.targets')" />

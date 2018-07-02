@@ -321,3 +321,4 @@ ASALocalRun/
 # NVidia Nsight GPU debugger configuration file
 *.nvuser
 SelfBot NET/SelfBot NET/bin/Debug/Constants/UserToken
+/SelfBot NET/SelfBot NET/bin/Debug/Constants/WIWdata.txt
