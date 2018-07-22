@@ -309,6 +309,7 @@ namespace SelfBot
             #region Brady Tracker
             if (message.Content.ToLower().Contains("brady") && message.Author.Id != 108312797162541056 && !message.Author.IsBot)
             {
+                if (message.Content.ToLower() != "brady") File.AppendAllText("Files/bradyQuotes.txt","\n"+message.Content);
                 var bradyChan = client.GetChannel(322978036465270784) as IMessageChannel;
                 var user = message.Author as IGuildUser;
                 var role = user.Guild.GetRole(user.RoleIds.ElementAtOrDefault(1));

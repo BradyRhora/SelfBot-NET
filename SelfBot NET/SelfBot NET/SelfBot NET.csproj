@@ -171,7 +171,7 @@
     <Content Include="bin\Debug\Constants\help.txt" />
     <Content Include="bin\Debug\Constants\knotting-maximum.gif" />
     <Content Include="bin\Debug\Constants\SudokuFormat.txt" />
-    <Content Include="bin\Debug\Constants\WIWdata.txt" />
+    <None Include="bin\Debug\Constants\WIWdata" />
     <Content Include="bin\Debug\Files\lennyStats.txt" />
     <Content Include="bin\Debug\Files\saves.txt" />
   </ItemGroup>

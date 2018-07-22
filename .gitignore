@@ -322,3 +322,4 @@ ASALocalRun/
 *.nvuser
 SelfBot NET/SelfBot NET/bin/Debug/Constants/UserToken
 /SelfBot NET/SelfBot NET/bin/Debug/Constants/WIWdata.txt
+/SelfBot NET/SelfBot NET/bin/Debug/Constants/WIWdata

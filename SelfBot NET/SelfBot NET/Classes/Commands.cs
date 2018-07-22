@@ -13,6 +13,7 @@ namespace SelfBot
     public class Commands : ModuleBase
     {
         static HttpClient client = new HttpClient();
+        Random rdm = new Random();
 
         [Command("eval"), Summary("Runs the given C# code and returns the output.")]
         public async Task EvaluateCmd([Remainder] string expression)
@@ -450,11 +451,24 @@ namespace SelfBot
         [Command("nextshift"), Summary("Get my next shift date and time.")]
         public async Task NextShift()
         {
+            var loginData = File.ReadAllLines("Constants/WIWdata");
             Dictionary<string, string> data = new Dictionary<string, string>()
             {
-                {"username","us" },
-                {"password","pa" }
+                {"username",loginData[0] },
+                {"password",loginData[1] },
+                {"key",loginData[2] }
             };
+
+            var content = new FormUrlEncodedContent(data);
+            var response = await client.PostAsync("https://api.wheniwork.com/2/login", content);
+            var responseString = await response.Content.ReadAsStringAsync();
+        }
+
+        [Command("brady"), Summary("Gets a random Brady quote.")]
+        public async Task Brady()
+        {
+            var quotes = File.ReadAllLines("Files/bradyQuotes.txt");
+            await ReplyAsync(quotes[rdm.Next(quotes.Count())]);
         }
 
         Color GetColor(IUser User)
