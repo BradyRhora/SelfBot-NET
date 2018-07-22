@@ -440,30 +440,7 @@ namespace SelfBot
             }
             await Context.Message.ModifyAsync(x => x.Content = msg);
         }
-
-        [Command("bigemote"), Summary("Make emotes big!")]
-        public async Task BigEmote(string emote)
-        {
-            Emoji em = new Emoji(emote);
-            await ReplyAsync(em.Name + "\n" + (em as IEmote).Name);
-        }
-
-        [Command("nextshift"), Summary("Get my next shift date and time.")]
-        public async Task NextShift()
-        {
-            var loginData = File.ReadAllLines("Constants/WIWdata");
-            Dictionary<string, string> data = new Dictionary<string, string>()
-            {
-                {"username",loginData[0] },
-                {"password",loginData[1] },
-                {"key",loginData[2] }
-            };
-
-            var content = new FormUrlEncodedContent(data);
-            var response = await client.PostAsync("https://api.wheniwork.com/2/login", content);
-            var responseString = await response.Content.ReadAsStringAsync();
-        }
-
+        
         [Command("brady"), Summary("Gets a random Brady quote.")]
         public async Task Brady()
         {
