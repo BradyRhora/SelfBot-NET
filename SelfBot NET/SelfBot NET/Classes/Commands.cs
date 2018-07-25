@@ -445,7 +445,8 @@ namespace SelfBot
         public async Task Brady()
         {
             var quotes = File.ReadAllLines("Files/bradyQuotes.txt");
-            await ReplyAsync(quotes[rdm.Next(quotes.Count())]);
+            await Context.Message.DeleteAsync();
+            await ReplyAsync("```"+quotes[rdm.Next(quotes.Count())]+"```");
         }
 
         Color GetColor(IUser User)
