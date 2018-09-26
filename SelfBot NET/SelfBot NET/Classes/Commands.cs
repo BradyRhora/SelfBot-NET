@@ -448,6 +448,15 @@ namespace SelfBot
             await Context.Message.DeleteAsync();
             await ReplyAsync("```"+quotes[rdm.Next(quotes.Count())]+"```");
         }
+        
+        [Command("hey"), Summary("Sends random Skyrim guard quote.")]
+        public async Task Hey()
+        {
+            var quotes = File.ReadAllLines("Files/guardQuotes.txt");
+            string quote = quotes[rdm.Next(quotes.Count())];
+            await Context.Message.ModifyAsync(x => x.Content = quote);
+        }
+
 
         Color GetColor(IUser User)
         {
