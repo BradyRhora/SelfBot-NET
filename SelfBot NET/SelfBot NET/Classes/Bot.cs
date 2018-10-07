@@ -17,7 +17,7 @@ namespace SelfBot
 
         #region Vars
         public static DiscordSocketClient client;
-        private CommandService commands;
+        public static CommandService commands;
         public static string[] lennyStats = File.ReadAllLines(@"Files\lennyStats.txt"); //0 - happy lennys 1 - sad lennys 2 - bennys
         public static bool quirk;
         public static bool lenny;
@@ -309,6 +309,7 @@ namespace SelfBot
             #region Brady Tracker
             if (message.Content.ToLower().Contains("brady") && message.Author.Id != 108312797162541056 && !message.Author.IsBot)
             {
+                if (message.Content.ToLower() != "brady") File.AppendAllText("Files/bradyQuotes.txt","\n"+message.Content);
                 var bradyChan = client.GetChannel(322978036465270784) as IMessageChannel;
                 var user = message.Author as IGuildUser;
                 var role = user.Guild.GetRole(user.RoleIds.ElementAtOrDefault(1));
@@ -343,37 +344,6 @@ namespace SelfBot
             }
             #endregion
             
-            #region AutoResponder
-            if (message.Attachments.Count <= 0 && message.Content.Length < 200 && learning)
-            {
-
-                //So, we'll have to start with learning proper responses. Instead of just using my information, I'll try to use as much as I can from all the servers I'm on.
-
-
-                string txt = message.Content;
-
-                int chanID = -1;
-                for (int i = 0; i < channels.Count(); i++)
-                {
-                    if (channels[i] == message.Channel)
-                    {
-                        chanID = i;
-                        break;
-                    }
-                }
-
-                //If the message has been seen before..
-                if (!Funcs.ListExists(txt))
-                {
-                    var list = Funcs.NewList(txt);
-                }
-
-                if (lastMessage[chanID] != null) Funcs.AddResponse(lastMessage[chanID], txt);
-
-                lastMessage[chanID] = message.Content;
-            }
-            #endregion
-
 
             if (message.HasCharPrefix('+', ref argPos) && (message.Author.Id == client.CurrentUser.Id || message.Author.Id == Constants.ZAIM))
             {

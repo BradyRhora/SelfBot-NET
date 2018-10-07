@@ -6,13 +6,16 @@ using System.Threading;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
+using System.Net.Http;
 
 namespace SelfBot
 {
     public class Commands : ModuleBase
     {
+        static HttpClient client = new HttpClient();
+        Random rdm = new Random();
 
-        [Command("eval")]
+        [Command("eval"), Summary("Runs the given C# code and returns the output.")]
         public async Task EvaluateCmd([Remainder] string expression)
         {
             IUserMessage msg = await ReplyAsync("Evaluating...");
@@ -32,7 +35,7 @@ namespace SelfBot
 
         }
 
-        [Command("deed")]
+        [Command("deed"), Summary("Dick Extraction and Evaluation Device.")]
         public async Task Deed(string name, int age, int skin, int hotness)
         {
             Random rdm = new Random();
@@ -93,7 +96,7 @@ namespace SelfBot
             Console.WriteLine($"{name}'s DEED rating was calculated, returning {rating}%.");
         }
 
-        [Command("quirk")]
+        [Command("quirk"), Summary("Text quirks.")]
         public async Task Quirk(string troll)
         {
             string[] trolls = { "kv", "am", "tn", "nl", "km", "vs", "sc", "tp", "ez", "gm", "ea", "fp", "dp" };
@@ -151,7 +154,7 @@ namespace SelfBot
             await Fuse(name, item);
         }
 
-        [Command("fuse")]
+        [Command("fuse"), Summary("Fuses the two inputted words/names.")]
         public async Task Fuse(string item1, string item2)
         {
             item1 = item1.ToLower();
@@ -233,7 +236,7 @@ namespace SelfBot
             }
         }
 
-        [Command("lenny")]
+        [Command("lenny"), Summary("Converts &l to lenny face, or displays stats.")]
         public async Task Lenny()
         {
             if (!Bot.lenny) { await Context.Message.ModifyAsync(x => x.Content = "( ͡° ͜ʖ ͡°)"); Bot.lenny = true; }
@@ -268,7 +271,7 @@ namespace SelfBot
             }
         }
 
-        [Command("amal")]
+        [Command("amal"), Summary("Amalgamates the given string.")]
         public async Task Amalgamemetion(int amount, [Remainder] string arg)
         {
             bool lenny = false;
@@ -321,7 +324,7 @@ namespace SelfBot
             Console.WriteLine($"{arg} has been amalgmated at a size of {amount}.");
         }
 
-        [Command("f")]
+        [Command("f"), Summary("F")]
         public async Task Eff(string param)
         {
             if (param.ToLower() == "f")
@@ -342,7 +345,7 @@ namespace SelfBot
             }
         }
 
-        [Command("pain")]
+        [Command("pain"), Summary("Spelling with bread!")]
         public async Task Pain([Remainder] string word)
         {
             if (word.Contains("|"))
@@ -372,42 +375,88 @@ namespace SelfBot
             }
         }
 
-        [Command("waggle")]
+        [Command("waggle"), Summary(";)")]
         public async Task Waggle()
         {
             await Context.Message.DeleteAsync();
-            await Context.Channel.SendFileAsync(@"C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot\SelfBot\Constants\knotting-maximum.gif");
+            await Context.Channel.SendFileAsync(@"Constants\knotting-maximum.gif");
         }
 
-        [Command("help")]
+        [Command("help"), Summary("Displays commands and descriptions.")]
         public async Task Help()
         {
-            string[] helpFields = File.ReadAllLines(@"Constants\help.txt");
-
             JEmbed emb = new JEmbed();
-            emb.Author.Name = "SelfBot Commands!";
-            emb.ThumbnailUrl = Context.User.AvatarId;
+            emb.Author.Name = "Commands";
             emb.ColorStripe = GetColor(Context.User);
 
-            for (int i = 0; i < helpFields.Count(); i += 2)
+            foreach (CommandInfo command in Bot.commands.Commands)
+            {
                 emb.Fields.Add(new JEmbedField(x =>
                 {
-                    x.Header = helpFields[i];
-                    x.Text = helpFields[i + 1];
+                    string header = "+" + command.Name;
+                    foreach (ParameterInfo parameter in command.Parameters)
+                    {
+                        header += " [" + parameter.Name + "]";
+                    }
+                    x.Header = header;
+                    x.Text = command.Summary;
                 }));
-
+            }
             await Context.Channel.SendMessageAsync("", embed: emb.Build());
         }
-
-        [Command("learn")]
-        public async Task Learn()
+        
+        [Command("subscript"), Summary("Convert text to subscript")]
+        public async Task Subscript([Remainder] string text)
         {
-            Bot.learning = !Bot.learning;
-            string msg;
-            if (Bot.learning) msg = ":heavy_check_mark:";
-            else msg = ":x:";
-            await Context.Message.ModifyAsync(x => x.Content = ":robot:" + msg);
+            string msg = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (Constants.ALPHABET.Contains(text[i])) msg += Constants.SUBSCRIPT[Constants.ALPHABET.IndexOf(text[i])];
+                else msg += text[i];
+            }
+            await Context.Message.ModifyAsync(x => x.Content = msg);
         }
+
+        [Command("small"), Summary("Convert text to small")]
+        public async Task Small([Remainder] string text)
+        {
+            string msg = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (Constants.ALPHABET.Contains(text[i])) msg += Constants.SMALL[Constants.ALPHABET.IndexOf(text[i])];
+                else msg += text[i];
+            }
+            await Context.Message.ModifyAsync(x => x.Content = msg);
+        }
+
+        [Command("superscript"), Summary("Convert text to superscript")]
+        public async Task Superscript([Remainder] string text)
+        {
+            string msg = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (Constants.ALPHABET.Contains(text[i])) msg += Constants.SUPERSCRIPT[Constants.ALPHABET.IndexOf(text[i])];
+                else msg += text[i];
+            }
+            await Context.Message.ModifyAsync(x => x.Content = msg);
+        }
+        
+        [Command("brady"), Summary("Gets a random Brady quote.")]
+        public async Task Brady()
+        {
+            var quotes = File.ReadAllLines("Files/bradyQuotes.txt");
+            await Context.Message.DeleteAsync();
+            await ReplyAsync("```"+quotes[rdm.Next(quotes.Count())]+"```");
+        }
+        
+        [Command("hey"), Summary("Sends random Skyrim guard quote.")]
+        public async Task Hey()
+        {
+            var quotes = File.ReadAllLines("Files/guardQuotes.txt");
+            string quote = quotes[rdm.Next(quotes.Count())];
+            await Context.Message.ModifyAsync(x => x.Content = quote);
+        }
+
 
         Color GetColor(IUser User)
         {
@@ -423,173 +472,7 @@ namespace SelfBot
             }
             else return Constants.DEFAULT_COLOUR;
         }
-
-        string[] GenerateSudoku()
-        {
-            string[] sudoku = new string[9];
-
-
-
-
-
-            return sudoku;
-        }
-
-        /* Forget me
-        #region Game Vars
-        public static string[] words;
-        public static int counter;
-        public static CommandContext cont;
-        #endregion
-
-        [Command("game")]
-        public async Task Game(int interval, [Remainder]string input)
-        {
-            words = input.Split(' ');
-            counter = 0;
-            cont = Context;
-            Timer t = new Timer(TimerCallback, null, 0, interval);
-            await Context.Channel.SendMessageAsync(":robot::ok_hand:");
-        }
-
-        async void TimerCallback(Object state)
-        {
-            try
-            {
-                var user = cont.User as ISelfUser;
-                if (counter > words.Count() -1) counter = 0;
-
-                
-
-                await (cont.Client as Discord.WebSocket.DiscordSocketClient).SetGameAsync(words[counter]);
-                counter++;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }*/
-
-
-        /*WebClient webclient = new WebClient();
-        [Command("image"), Alias("img")]
-        public async Task Image(string command) { await Image(command, 100); }
-
-
-        [Command("image"), Alias("img")]
-        public async Task Image(string command, int amount)
-        {
-            if (command == "on") { Bot.image = true; Bot.imgChan = Context.Channel; await Context.Message.ModifyAsync(x => x.Content = ":robot: Image Processing: On :robot:"); }
-            else
-            {
-                if (Bot.image && Context.Channel == Bot.imgChan)
-                {
-                    webclient.DownloadFileAsync(new Uri(Bot.imgURL), $@"Files\tempIMG.jpg");
-
-
-
-                    /* Image Processor Code (Much better. Fucc)
-                    ImageFactory fac = new ImageFactory();
-                    fac.Load(@"Files\tempIMG.jpg");
-
-                    if (command == "pixel") fac.Pixelate(amount);
-                    else if (command == "quality") fac.Quality(amount);
-                    else if (command == "rotate") fac.Rotate(amount);
-                    else if (command == "sharp") fac.GaussianSharpen(amount);
-                    else if (command == "bright") fac.Brightness(amount);
-                    else if (command == "contrast") fac.Contrast(amount);
-                    else if (command == "blur") fac.GaussianBlur(amount);
-                    else if (command == "hue") fac.Hue(amount);
-                    else if (command == "round") fac.RoundedCorners(amount);
-                    //else if (command == "") fac.Tint();
-
-                    fac.Save(@"Files\editedIMG.jpg");
-                    
-                    await Context.Channel.SendFileAsync(@"Files\editedIMG.jpg");
-
-                }
-            }
-            
-        }*/
-
-        #region CLOSED UNTIL FURTHER NOTICE (Evolve, Game)
-        /*[Command("evolve")]
-        public async Task Evolve(string word)
-        {
-            //how do I want to make it "evolve"?
-            //dont forget 'mutations'
-            //multiple evolution types?
-
-            Random rdm = new Random();
-            int portion = Convert.ToInt32(Math.Round(Convert.ToDecimal(word.Length / 5))); //get portion of text (20%)
-            int rand = 0;
-            while (rand == 0) rand = rdm.Next(-1, 2);
-            string sub = "";
-            if (rand < 0)
-            {
-                sub = word.Substring(word.Length + rand, portion);
-            }
-            else if (rand > 0)
-            {
-                sub = word.Substring(portion);
-            }
-
-            Mutate(sub);
-
-        }
-
-        string Mutate(string input)
-        {
-            char[] chars = input.ToCharArray();
-            Random chance = new Random();
-            for (int i = 0; i < chars.Count(); i++)
-            {
-                if (chance.Next(100) < 5)
-                {
-
-                }
-            }
-            return input;
-        }
-
-        [Command("save", RunMode = RunMode.Async)]
-        public async Task Save(int ID)
-        {
-            try
-            {
-
-
-                List<string> file = File.ReadAllLines(@"C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot\SelfBot\Files\saves.txt").ToList();
-                if (msg.Attachments != null) file.Add($"{msg.Author.Username}|{msg.Content}|{msg.Author.GetAvatarUrl()}|{msg.Attachments}");
-                else file.Add($"{msg.Author.Username}|{msg.Content}|{msg.Author.GetAvatarUrl()}");
-                File.WriteAllLines(@"C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot\SelfBot\Files\saves.txt", file);
-                await Context.Message.ModifyAsync(x => x.Content = "Saved!");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-
-        [Command("show", RunMode = RunMode.Async)]
-        public async Task Show(int ID)
-        {
-            try { 
-            var file = File.ReadAllLines(@"C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot\SelfBot\Files\saves.txt");
-            string[] items = file[ID].Split('|');
-            EmbedBuilder emb;
-                if (items.Count() == 4) emb = new EmbedBuilder().WithTitle(items[0]).WithDescription(items[1]).WithThumbnailUrl(items[2]).WithImageUrl(items[3]);
-                else emb = new EmbedBuilder().WithTitle(items[0]).WithDescription(items[1]).WithThumbnailUrl(items[2]);
-            await Context.Message.DeleteAsync();
-            await Context.Channel.SendMessageAsync("",embed: emb);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        */
-        #endregion
+        
     }
 
 }

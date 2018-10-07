@@ -16,7 +16,5 @@ F. Types are currently: 'F' and 'pain'.
 Converts inputted text to painful sadness. Use '|' to seperate words, max word size is 6 letters.
 +waggle
 ;)
-+dragonball (command)
-Can also use +db. You'll probably know which command to use when you need it.
 +help
 Shows this menu.

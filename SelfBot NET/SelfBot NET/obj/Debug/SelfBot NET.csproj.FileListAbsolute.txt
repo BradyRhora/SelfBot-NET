@@ -59,3 +59,116 @@ C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\Sel
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.Scripting.xml
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.Scripting.xml
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Reflection.Metadata.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe.config
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.pdb
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Commands.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Core.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rest.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rpc.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Webhook.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.WebSocket.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Newtonsoft.Json.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.AppContext.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Collections.Immutable.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Console.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Interactive.Async.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.IO.FileSystem.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Threading.Thread.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.ValueTuple.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Xml.XPath.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Commands.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Core.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rest.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rpc.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Webhook.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.WebSocket.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.Scripting.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.Scripting.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Newtonsoft.Json.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Collections.Immutable.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Interactive.Async.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Reflection.Metadata.xml
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csprojResolveAssemblyReference.cache
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csproj.CoreCompileInputs.cache
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
+C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe.config
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.pdb
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Commands.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Core.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rest.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rpc.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Webhook.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.WebSocket.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Newtonsoft.Json.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.AppContext.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Collections.Immutable.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Console.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Interactive.Async.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.IO.FileSystem.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Threading.Thread.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.ValueTuple.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Xml.XPath.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Commands.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Core.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rest.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rpc.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Webhook.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.WebSocket.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.Scripting.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.Scripting.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Newtonsoft.Json.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Collections.Immutable.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Interactive.Async.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Reflection.Metadata.xml
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csprojAssemblyReference.cache
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csproj.CoreCompileInputs.cache
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csproj.CopyComplete
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
+C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
