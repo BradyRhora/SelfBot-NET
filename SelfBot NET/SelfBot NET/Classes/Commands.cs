@@ -622,7 +622,10 @@ namespace SelfBot
             var msgs = await Context.Channel.GetMessagesAsync().Flatten();
             var match = msgs.Where(x => x.Id == messageID);
             var msg = match.FirstOrDefault();
-            if (msg == null) await ReplyAsync(":robot: Not found.");
+            if (msg == null)
+            {
+
+            }
             else
             {
                 JEmbed msgEmb = new JEmbed();
@@ -633,7 +636,7 @@ namespace SelfBot
                 });
                 msgEmb.Description = msg.Content;
                 msgEmb.ColorStripe = GetColor(msg.Author);
-                msgEmb.Footer.Text = msg.Timestamp.LocalDateTime.ToString("dddd, dd MMM hh:mm tt");
+                msgEmb.Footer.Text = msg.Timestamp.LocalDateTime.ToString("dddd, MMM dd hh:mm tt");
                 await Context.Message.ModifyAsync(x => { x.Content = ""; x.Embed = msgEmb.Build(); });
             }
         }
