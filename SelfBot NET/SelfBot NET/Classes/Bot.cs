@@ -24,9 +24,12 @@ namespace SelfBot
         public static string qTroll;
 
         public static bool learning = false;
+        public static bool away = false;
 
         public static string[] lastMessage;
         public static IChannel[] channels;
+
+        
 
         /*public static bool image = false;
         public static IChannel imgChan;
@@ -38,6 +41,7 @@ namespace SelfBot
             Start:
             try
             {
+                DiscordSocketConfig config = new DiscordSocketConfig() { MessageCacheSize = 1000 };
                 Console.WriteLine("Welcome, Brady. Initializing Selfbot...");
                 client = new DiscordSocketClient();
                 Console.WriteLine("Client Initialized.");
@@ -90,7 +94,7 @@ namespace SelfBot
             var message = messageParam as SocketUserMessage;
             if (message == null) return;
             int argPos = 0;
-
+            
             #region Quirks
             if (quirk && !message.HasCharPrefix('+', ref argPos) && message.Author.Id == client.CurrentUser.Id)
             {
@@ -320,29 +324,29 @@ namespace SelfBot
                 await bradyChan.SendMessageAsync("", embed: emb);
             }
             #endregion
-            #region Tatsumaki
-            if (message.Author.Id == 172002275412279296)
-            {
-                if (message.Channel.Id == 354451391290408960)
-                {
-                    if (message.Content.Contains("daily"))
-                    {
-                        var dailyChan = client.GetChannel(263602576849633283) as IMessageChannel;
-                        await dailyChan.SendMessageAsync("t!daily");
-                        await dailyChan.SendMessageAsync("t!remindme daily in 1 day");
-                        await dailyChan.SendMessageAsync("t!slots 200");
-                    }
-                }
-                else if (message.Content.Contains($"has given {client.GetUser(Constants.BRADY).Mention} a repuation point"))
-                {
-                    string repUser = message.Content;
-                    repUser = repUser.Replace($" has given {client.GetUser(Constants.BRADY).Mention} a repuation point!", "");
-                    repUser = repUser.Replace(":up:  |  ", "");
 
-                    await message.Channel.SendMessageAsync($"t!rep {repUser}");
+
+            if (message.MentionedUsers.Where(x => x.Id == Constants.BRADY).Count() > 0 && away)
+            {
+                try
+                {
+                    string sentence = Brain.GenerateSentence();
+                    await message.Channel.SendMessageAsync(":robot::speech_balloon: " + sentence);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
                 }
             }
-            #endregion
+
+            if (learning)
+            {
+                string[] invalidPrefixs = { "/", "+", ";", "-", "!", ".", "#" };
+                bool valid = true;
+                foreach (string chr in invalidPrefixs) if (message.Content.StartsWith(chr)) valid = false;
+                if (valid)  Brain.Read(message.Content);
+            }
+
             
 
             if (message.HasCharPrefix('+', ref argPos) && (message.Author.Id == client.CurrentUser.Id || message.Author.Id == Constants.ZAIM))
@@ -373,6 +377,7 @@ namespace SelfBot
 
             lastMessage = new string[channels.Count()];
         }
+        
     }
 
 

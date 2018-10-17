@@ -326,3 +326,5 @@ SelfBot NET/SelfBot NET/bin/Debug/Constants/UserToken
 SelfBot NET/SelfBot NET/bin/Debug/SelfBot NET.pdb
 SelfBot NET/SelfBot NET/obj/Debug/SelfBot NET.pdb
 SelfBot NET/.vs/SelfBot NET/v15/.suo
+*.wrd
+*.wrd
