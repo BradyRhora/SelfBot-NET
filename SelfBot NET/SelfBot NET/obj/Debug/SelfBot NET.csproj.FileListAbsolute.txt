@@ -4,9 +4,6 @@ c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\bin
 c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csprojResolveAssemblyReference.cache
 c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
 c:\users\owner\documents\visual studio 2017\Projects\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
-C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe.config
-C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe
-C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.pdb
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Commands.dll
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Core.dll
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rest.dll
@@ -31,8 +28,6 @@ C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\Sel
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Collections.Immutable.xml
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System.Interactive.Async.xml
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csprojResolveAssemblyReference.cache
-C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
-C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Microsoft.CodeAnalysis.dll
@@ -172,3 +167,11 @@ C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBo
 C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csproj.CopyComplete
 C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
 C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot.exe.config
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot.exe
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot.exe
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\HtmlAgilityPack.xml

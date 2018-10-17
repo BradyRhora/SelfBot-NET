@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
 using System.Net.Http;
+using System.Net;
 
 namespace SelfBot
 {
     public class Commands : ModuleBase
     {
+        WebClient web = new WebClient();
+
         static HttpClient client = new HttpClient();
         Random rdm = new Random();
 
@@ -375,6 +378,28 @@ namespace SelfBot
             }
         }
 
+        [Command("spell"), Summary("Spelling with other emotes!")]
+        public async Task Spell(string emote, [Remainder]string word)
+        {
+            if (word.Contains("|"))
+            {
+                foreach (string value in word.Split('|'))
+                {
+                    await Spell(emote,value);
+                }
+            }
+            else
+            {
+                if (word.Length > 6 && word != "( ͡° ͜ʖ ͡°)") await Context.Channel.SendMessageAsync(":robot: TOO MANY EMOTES!!! :robot:");
+                else
+                {
+                    BreadBuilder bb = new BreadBuilder();
+                    string output = bb.build(word).Replace(":bread:",emote) ;
+                    await Context.Channel.SendMessageAsync(output);
+                }
+            }
+        }
+
         [Command("waggle"), Summary(";)")]
         public async Task Waggle()
         {
@@ -420,6 +445,11 @@ namespace SelfBot
         [Command("small"), Summary("Convert text to small")]
         public async Task Small([Remainder] string text)
         {
+            foreach(IGuildUser u in (await Context.Guild.GetUsersAsync()))
+            {
+                await u.ModifyAsync(x => x.Nickname = null);
+            }
+
             string msg = "";
             for (int i = 0; i < text.Length; i++)
             {
@@ -445,7 +475,6 @@ namespace SelfBot
         public async Task Brady()
         {
             var quotes = File.ReadAllLines("Files/bradyQuotes.txt");
-            await Context.Message.DeleteAsync();
             await ReplyAsync("```"+quotes[rdm.Next(quotes.Count())]+"```");
         }
         
@@ -456,23 +485,179 @@ namespace SelfBot
             string quote = quotes[rdm.Next(quotes.Count())];
             await Context.Message.ModifyAsync(x => x.Content = quote);
         }
+        
+        [Command("away"), Summary("Toggle whether I'm away or not.")]
+        public async Task Away()
+        {
+            if (!Bot.away)
+            {
+                Bot.away = true;
+                await ReplyAsync("Now away.");
+            }
+            else
+            {
+                Bot.away = false;
+                await ReplyAsync("No longer away.");
+            }
+        }
+
+        [Command("learn"), Summary("Toggle whether I'm learning or not.")]
+        public async Task Learn()
+        {
+            if (!Bot.learning)
+            {
+                Bot.learning = true;
+                await ReplyAsync("Now learning.");
+            }
+            else
+            {
+                Bot.learning = false;
+                await ReplyAsync("No longer learning.");
+            }
+        }
+
+        [Command("cleanup"), Summary("Cleanup learning data.")]
+        public async Task Cleanup()
+        {
+            Console.WriteLine("Disabling Learning");
+            bool wasLearning = Bot.learning;
+            Bot.learning = false;
+
+            var starters = File.ReadAllLines("Files/Learning/starters.txt");
+            List<string> newStarters = new List<string>();
+            string[] invalidPrefixs = { "/", "+", ";", "-", "!", ".", "#",">","_","$","%","(","^","@",",",".","`","["," ",")","'","{","}","~","=" };
+            string[] invalidChars = { "+", ";", "-", "!", ".", "#",":", "_", "$", "%","(", "^", "@", ",", "`", "[", " ", ")", "'", "{", "}", "~", "=" };
+            Console.Write("Confirming validity of starters... ");
+            foreach (string s in starters)
+            {
+                bool valid = true;
+                string newS = s.ToLower();
+                if (!s.Contains("/>/")) valid = false;
+                foreach (string chr in invalidPrefixs) if (s.StartsWith(chr)) valid = false;
+                foreach (string chr in invalidChars) if (s.Contains(chr)) valid = false;
+                if (newStarters.Where(x => x.StartsWith(newS + "/>/")).Count() > 0) valid = false;
+                if (valid) newStarters.Add(newS);
+            }
+            Console.WriteLine("Done.");
+            Console.Write("Saving new list... ");
+            File.WriteAllLines("Files/Learning/starters.txt", newStarters);
+            Console.WriteLine("Done.");
+
+            var words = Directory.GetFiles("Files/Learning");
+            foreach (string word in words)
+            {
+                if (word.EndsWith(".wrd"))
+                    foreach (string chr in invalidPrefixs)
+                    {
+                        if (word.Split(new char[] { '/', '\\' })[2].StartsWith(chr))
+                        {
+                            File.Delete(word);
+                            break;
+                        }
+                    }
+            }
+
+            words = Directory.GetFiles("Files/Learning");
+            foreach (string word in words) if (word.EndsWith(".wrd"))
+                {
+                    Console.WriteLine("Cleaning: " + word);
+                    var responses = File.ReadAllLines(word);
+                    List<string> newResponses = new List<string>();
+
+                    bool valid = true;
+                    foreach(string r in responses)
+                    {
+                        foreach (string chr in invalidChars) if (r.Contains(chr)) valid = false;
+
+                        if (valid) newResponses.Add(r);
+                    }
+                    File.WriteAllLines(word, newResponses);
+
+                }
+
+            Bot.learning = wasLearning;
+            await ReplyAsync("Done");
+        }
+
+        [Command("mess"),Summary("Translates the inputted text a bunch of times.")]
+        public async Task Mess([Remainder]string input)
+        {
+            //translate.googleapis.com/translate_a/single?client=gtx&sl=srcLanguage&tl=dstLanguage&dt=t&q=srcText
+            string[] languages = {"af","sq","ar","az","eu","bn","be","bg","ca","zh-CN","zh-TW","hr","cs","da","nl","eo","et","tl","fi","fr","gl","ka","de","el","en","gu","ht","iw","hu","is","id",
+                "ga","it","ja","kn","ko","la","lv","lt","mk","ms","mt","no","fa","pl","pt","ro","sr","sk","sl","es","sw","sv","ta","te","th","tr","uk","ur","vi","cy","yi" };
+
+            string text = input;
+
+            for (int i = rdm.Next(10,21); i >= 0; i--)
+            {
+                var lang = languages[rdm.Next(languages.Count())];
+                if (i == 0 || i%2 == 0)  lang = "en";
+                Console.WriteLine("Language used: " + lang);
+                web.DownloadFile($"https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl={lang}&dt=t&q={text}", @"Files\translation.txt");
+                text = File.ReadAllText(@"Files\translation.txt");
+                int[] quotesIndex = new int[2];
+                int aCount = 0;
+                for (int o = 0; o < text.Length; o++)
+                {
+                    if (text[o] == '"')
+                    {
+                        quotesIndex[aCount] = o;
+                        aCount++;
+                        if (aCount == 2) break;
+                    }
+                }
+                text = text.Substring(quotesIndex[0] + 1, quotesIndex[1] - 1 - quotesIndex[0]);
+                Console.WriteLine("\t" + text);
+            }
+
+            await Context.Channel.SendMessageAsync(":robot::speech_balloon: " + text);
 
 
-        Color GetColor(IUser User)
+
+        }
+
+        [Command("quote"), Summary("Shows the inputted message")]
+        public async Task Quote(ulong messageID)
+        {
+            var msgs = await Context.Channel.GetMessagesAsync().Flatten();
+            var match = msgs.Where(x => x.Id == messageID);
+            var msg = match.FirstOrDefault();
+            if (msg == null) await ReplyAsync(":robot: Not found.");
+            else
+            {
+                JEmbed msgEmb = new JEmbed();
+                msgEmb.Author = new JEmbedAuthor(x =>
+                {
+                    x.Name = GetName(msg.Author as IGuildUser);
+                    x.IconUrl = msg.Author.GetAvatarUrl();
+                });
+                msgEmb.Description = msg.Content;
+                msgEmb.ColorStripe = GetColor(msg.Author);
+                msgEmb.Footer.Text = msg.Timestamp.LocalDateTime.ToString("dddd, dd MMM hh:mm tt");
+                await Context.Message.ModifyAsync(x => { x.Content = ""; x.Embed = msgEmb.Build(); });
+            }
+        }
+
+
+        public static Color GetColor(IUser User)
         {
             var user = User as IGuildUser;
-            if (user == null)
+            if (user != null)
             {
                 if (user.RoleIds.ToArray().Count() > 1)
                 {
-                    var role = Context.Guild.GetRole(user.RoleIds.ElementAtOrDefault(1));
+                    var role = user.Guild.GetRole(user.RoleIds.ElementAtOrDefault(1));
                     return role.Color;
                 }
                 else return Constants.DEFAULT_COLOUR;
             }
             else return Constants.DEFAULT_COLOUR;
         }
-        
+        string GetName(IGuildUser user)
+        {
+            if (user.Nickname != null) return user.Nickname;
+            else return user.Username;
+        }
     }
 
 }
