@@ -6,16 +6,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
-using System.Net.Http;
 using System.Net;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+using System.Text.RegularExpressions;
 
 namespace SelfBot
 {
     public class Commands : ModuleBase
     {
         WebClient web = new WebClient();
-
-        static HttpClient client = new HttpClient();
         Random rdm = new Random();
 
         [Command("eval"), Summary("Runs the given C# code and returns the output.")]
@@ -641,6 +643,61 @@ namespace SelfBot
             }
         }
 
+        [Command("party"), Summary("How's the party?")]
+        public async Task Party()
+        {
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.AddArgument("headless");
+            IWebDriver chrome = new ChromeDriver(chromeOptions);
+
+            string[] charIDs = { "3969285", "4678486","4528604","5517451","5625203"};
+
+
+            foreach (string id in charIDs)
+            {
+                chrome.Navigate().GoToUrl("https://www.dndbeyond.com/characters/"+id);
+
+                var wait = new WebDriverWait(chrome, new TimeSpan(0, 0, 10));
+                wait.Until(ExpectedConditions.ElementExists(By.ClassName("ct-character-tidbits__avatar")));
+
+                var imgElem = chrome.FindElement(By.ClassName("ct-character-tidbits__avatar"));
+                var imgUrl = imgElem.GetCssValue("background-image").Replace("url(\"", "").Replace("\")", "");
+
+                String pageSource = chrome.FindElement(By.TagName("body")).Text;
+
+                var charData = pageSource.Split('\n');
+                var name = charData[3].Trim('\r');
+                var health = charData[9].Trim('\r');
+                var GenderRaceLevel = charData[4].Trim('\r');
+                var exp = charData[7].Trim('\r');
+                var cLevel = charData[5].Trim('\r');
+                var nLevel = charData[6].Trim('\r');
+
+                JEmbed emb = new JEmbed();
+                emb.Title = name;
+                emb.ThumbnailUrl = imgUrl;
+                var grl = Regex.Replace(GenderRaceLevel, "[A-Z]", " $&").Trim();
+                emb.Description = grl;
+                emb.Fields.Add(new JEmbedField(x =>
+                {
+                    x.Header = ":heart: Health";
+                    x.Text = health;
+                    x.Inline = true;
+                }));
+                emb.Fields.Add(new JEmbedField(x =>
+                {
+                    x.Header = ":arrow_up: EXP";
+                    x.Text = cLevel + " -> " + exp + " -> " + nLevel;
+                    x.Inline = true;
+                }));
+                emb.ColorStripe = new Color(rdm.Next(256), rdm.Next(256), rdm.Next(256));
+                await ReplyAsync("", embed: emb.Build());
+            }
+            chrome.Close();
+        }
+
+
+
 
         public static Color GetColor(IUser User)
         {
@@ -661,6 +718,7 @@ namespace SelfBot
             if (user.Nickname != null) return user.Nickname;
             else return user.Username;
         }
+        
     }
 
 }

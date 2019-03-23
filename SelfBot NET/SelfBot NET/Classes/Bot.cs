@@ -349,7 +349,7 @@ namespace SelfBot
 
             
 
-            if (message.HasCharPrefix('+', ref argPos) && (message.Author.Id == client.CurrentUser.Id || message.Author.Id == Constants.ZAIM))
+            if (message.HasCharPrefix('+', ref argPos) && (message.Author.Id == client.CurrentUser.Id || (message.Channel as IGuildChannel).GuildId == 465727022253998080) || (message.Channel as IGuildChannel).GuildId == 308761161258500097)
             {
 
                 var context = new CommandContext(client, message);
