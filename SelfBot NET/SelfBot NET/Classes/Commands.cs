@@ -638,7 +638,7 @@ namespace SelfBot
                 });
                 msgEmb.Description = msg.Content;
                 msgEmb.ColorStripe = GetColor(msg.Author);
-                msgEmb.Footer.Text = msg.Timestamp.LocalDateTime.ToString("dddd, MMM dd hh:mm tt");
+                msgEmb.Footer.Text = msg.Timestamp.LocalDateTime.AddHours(-4).ToString("dddd, MMM dd hh:mm tt");
                 await Context.Message.ModifyAsync(x => { x.Content = ""; x.Embed = msgEmb.Build(); });
             }
         }
