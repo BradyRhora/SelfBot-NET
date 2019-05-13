@@ -110,9 +110,6 @@ C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\obj
 C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csproj.CoreCompileInputs.cache
 C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
 C:\Users\brady\OneDrive\Documents\GitHub\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
-C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe.config
-C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.exe
-C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot NET.pdb
 C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Commands.dll
 C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Core.dll
 C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\Discord.Net.Rest.dll
@@ -165,8 +162,6 @@ C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\System
 C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csprojAssemblyReference.cache
 C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csproj.CoreCompileInputs.cache
 C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.csproj.CopyComplete
-C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.exe
-C:\Users\brady\Source\Repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot NET.pdb
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot.exe.config
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot.exe
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot.pdb
@@ -175,3 +170,14 @@ C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\Sel
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\HtmlAgilityPack.dll
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Owner\Documents\Visual Studio 2017\Projects\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\HtmlAgilityPack.xml
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot.exe.config
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot.exe
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SelfBot.pdb
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\HtmlAgilityPack.dll
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\HtmlAgilityPack.xml
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot.exe
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\obj\Debug\SelfBot.pdb
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\WebDriver.dll
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\WebDriver.xml
+C:\Users\brady\source\repos\SelfBot-NET\SelfBot NET\SelfBot NET\bin\Debug\SeleniumExtras.WaitHelpers.dll
