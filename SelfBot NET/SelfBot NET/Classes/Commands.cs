@@ -696,7 +696,21 @@ namespace SelfBot
             chrome.Close();
         }
 
-
+        [Command("findemote"), Summary("Displays the server that contains the specified custom emote")]
+        public async Task FindEmote(string emote)
+        {
+            var gEmote = Emote.Parse(emote);
+            foreach (IGuild g in Bot.client.Guilds)
+            {
+                var matches = g.Emotes.Where(x => x.Id == gEmote.Id);
+                if (matches.Count() > 0)
+                {
+                    await ReplyAsync($"{emote} can be found in {g.Name}");
+                    return;
+                }
+            }
+            await ReplyAsync($"{emote} server not found.");
+        }
 
 
         public static Color GetColor(IUser User)
